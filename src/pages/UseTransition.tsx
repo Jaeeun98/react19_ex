@@ -12,26 +12,22 @@ const UseTransition = () => {
 
   const handleClick = async () => {
     // 상태 업데이트를 트랜지션으로 처리
-    const newCount = await updateCount(count);
     startTransition(async () => {
-      setCount(newCount);
-      // startTransition(() => {
-
-      // });
+      //updateCount를 startTransition에 안넣으면 isPending 안먹음
+      const newCount = await updateCount(count);
+      startTransition(() => {
+        setCount(newCount);
+      });
     });
   };
-
-  console.log("usePending", isPending);
 
   return (
     <div>
       <h1>useTransition</h1>
       <h2>Count: {count}</h2>
-
       <button onClick={handleClick} disabled={isPending}>
         Increment
       </button>
-
       {isPending ? "로딩 중..." : "카운트 증가"}
     </div>
   );
