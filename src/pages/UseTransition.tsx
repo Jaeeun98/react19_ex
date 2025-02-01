@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 
 const updateCount = async (count: number) => {
   return new Promise<number>((resolve) => {

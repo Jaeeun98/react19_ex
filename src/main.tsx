@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 import "./index.css";
 import App from "./App.tsx";
-import UseTransition from "./pages/useTransition.tsx";
+import UseTransition from "./pages/UseTransition.tsx";
+import UseTransitionInput from "./pages/UseTransitionInput.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/useTransition",
     Component: UseTransition,
+  },
+  {
+    path: "/UseTransitionInput",
+    Component: UseTransitionInput,
   },
 ]);
 
