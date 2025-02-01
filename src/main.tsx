@@ -6,6 +6,7 @@ import "./index.css";
 import App from "./App.tsx";
 import UseTransition from "./pages/UseTransition.tsx";
 import UseTransitionInput from "./pages/UseTransitionInput.tsx";
+import UseTransitionAwait from "./pages/UseTransitionAwait.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/UseTransitionInput",
     Component: UseTransitionInput,
+  },
+  {
+    path: "/UseTransitionAwait",
+    Component: UseTransitionAwait,
   },
 ]);
 

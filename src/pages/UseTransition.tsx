@@ -15,9 +15,10 @@ const UseTransition = () => {
     startTransition(async () => {
       //updateCount를 startTransition에 안넣으면 isPending 안먹음
       const newCount = await updateCount(count);
-      startTransition(() => {
-        setCount(newCount);
-      });
+      setCount(newCount);
+      // startTransition(() => {
+
+      // });
     });
   };
 
