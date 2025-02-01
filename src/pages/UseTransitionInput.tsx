@@ -1,4 +1,10 @@
-//잘못된 사용 예시 - 제어된 입력 state 경우
+/* 
+
+  잘못된 사용 예시 - 제어된 입력 state 경우
+  실제로 2초 후에 입력값이 변경되지만, 입력값이 변경되는 동안에는 입력값이 변경되지 않는 것처럼 보임
+  따라서 제어된 입력 state의 경우 useTransition을 사용하면 안됨
+  
+*/
 import { useState, useTransition } from "react";
 
 const updateCount = async (v: string) => {
