@@ -8,6 +8,8 @@ import UseTransition from "./pages/UseTransition.tsx";
 import UseTransitionInput from "./pages/UseTransitionInput.tsx";
 import UseTransitionAwait from "./pages/UseTransitionAwait.tsx";
 import Use from "./pages/Use.tsx";
+import UsePromise from "./pages/UsePromise.tsx";
+import UsePrePromise from "./pages/UsePrePromise.tsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
   {
     path: "/Use",
     Component: Use,
+  },
+  {
+    path: "/UsePromise",
+    Component: UsePromise,
+  },
+  {
+    path: "/UsePrePromise",
+    Component: UsePrePromise,
   },
 ]);
 
