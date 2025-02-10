@@ -1,16 +1,32 @@
+import { Link, Outlet } from "react-router";
 import "./App.css";
-// import { useNavigate } from "react-router-dom";
 
 function App() {
-  // const navigate = useNavigate();
-
-  // onclick = (e: React.MouseEventHandler<HTMLButtonElement>) => {
-  //   const value = e.currunt
-  // };
-
   return (
     <>
-      <button>UseTransition</button>
+      <nav>
+        <ul>
+          <li>
+            <Link to={"/useTransition"}>UseTransition</Link>
+          </li>
+          <li>
+            <Link to={"/useTransitionInput"}>UseTransitionInput</Link>
+          </li>
+          <li>
+            <Link to={"/useTransitionAwait"}>UseTransitionAwait</Link>
+          </li>
+          <li>
+            <Link to={"/use"}>Use</Link>
+          </li>
+          <li>
+            <Link to={"/usePromise"}>UsePromise</Link>
+          </li>
+          <li>
+            <Link to={"/usePrePromise"}>UsePrePromise</Link>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
     </>
   );
 }

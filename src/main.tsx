@@ -10,35 +10,42 @@ import UseTransitionAwait from "./pages/UseTransitionAwait.tsx";
 import Use from "./pages/Use.tsx";
 import UsePromise from "./pages/UsePromise.tsx";
 import UsePrePromise from "./pages/UsePrePromise.tsx";
+import UseAwait from "./pages/UseAwait.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: App,
-  },
-  {
-    path: "/useTransition",
-    Component: UseTransition,
-  },
-  {
-    path: "/UseTransitionInput",
-    Component: UseTransitionInput,
-  },
-  {
-    path: "/UseTransitionAwait",
-    Component: UseTransitionAwait,
-  },
-  {
-    path: "/Use",
-    Component: Use,
-  },
-  {
-    path: "/UsePromise",
-    Component: UsePromise,
-  },
-  {
-    path: "/UsePrePromise",
-    Component: UsePrePromise,
+    element: <App />,
+    children: [
+      {
+        path: "useTransition",
+        element: <UseTransition />,
+      },
+      {
+        path: "useTransitionInput",
+        element: <UseTransitionInput />,
+      },
+      {
+        path: "useTransitionAwait",
+        element: <UseTransitionAwait />,
+      },
+      {
+        path: "use",
+        element: <Use />,
+      },
+      {
+        path: "usePromise",
+        element: <UsePromise />,
+      },
+      {
+        path: "usePrePromise",
+        element: <UsePrePromise />,
+      },
+      {
+        path: "useAwait",
+        element: <UseAwait />,
+      },
+    ],
   },
 ]);
 
